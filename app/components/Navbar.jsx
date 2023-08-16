@@ -13,13 +13,7 @@ export async function Navbar() {
         <nav className="w-full h-16 flex items-center px-6 md:px-8 justify-between border-2 border-opacity-10 border-gray-500 mb-10">
             <div className="relative">
                 <Link href={'/'}>
-                    <Image
-                        width={120}
-                        height={50}
-                        src={logo}
-                        alt="Website Logo"
-                        priority={true}
-                     />
+                    <h1 className="text-2xl font-extrabold">FRIENDS</h1>
                 </Link>
             </div>
 

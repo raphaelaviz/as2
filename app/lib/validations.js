@@ -3,7 +3,7 @@ import * as z from "zod";
 export const createUserFormSchema = z.object({
     name: z
       .string()
-      .nonempty('Friend\s name must be informed.')
+      .nonempty('Please provide your friend\'s name.')
       .min(9, 'Friend\'s name must have at least 9 characters.')
       .refine(name => {
         const words = name.trim().split(' ');
@@ -16,7 +16,10 @@ export const createUserFormSchema = z.object({
       }),
     email: z 
       .string()
-      .nonempty('Email must be informed.')
+      .nonempty('Please provide your friend\'s email.')
       .email('Format invalid.'),
-    
+    image: z
+      .string()
+      .nonempty('Please choose an image option.')
+      .nonempty('Select an image option.') 
 });

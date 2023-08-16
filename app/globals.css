@@ -5,3 +5,7 @@
 .flex-center {
   @apply flex justify-center items-center
 }
+
+.card__button {
+  @apply hover:scale-125 transition-transform
+}
