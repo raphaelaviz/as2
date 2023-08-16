@@ -1,22 +1,15 @@
-export const users = [
-    { username: 'Alice Smith', email: 'alice.smith@example.com', phone: '123-456-7890', link: '/1' },
-    { username: 'Bob Johnson', email: 'bob.johnson@example.com', phone: '123-456-7891', link: '/2' },
-    { username: 'Charlie Williams', email: 'charlie.williams@example.com', phone: '123-456-7892', link: '/3' },
-    { username: 'David Brown', email: 'david.brown@example.com', phone: '123-456-7893', link: '/4' },
-    { username: 'Ella Davis', email: 'ella.davis@example.com', phone: '123-456-7894', link: '/5' },
-    { username: 'Frank Miller', email: 'frank.miller@example.com', phone: '123-456-7895', link: '/6' },
-    { username: 'Grace Wilson', email: 'grace.wilson@example.com', phone: '123-456-7896', link: '/7' },
-    { username: 'Harry Moore', email: 'harry.moore@example.com', phone: '123-456-7897', link: '/8' },
-    { username: 'Ivy Taylor', email: 'ivy.taylor@example.com', phone: '123-456-7898', link: '/9' },
-    { username: 'Jack Anderson', email: 'jack.anderson@example.com', phone: '123-456-7899', link: '/10' },
-    { username: 'Katie White', email: 'katie.white@example.com', phone: '123-456-7800', link: '/11' },
-    { username: 'Liam Harris', email: 'liam.harris@example.com', phone: '123-456-7801', link: '/12' },
-    { username: 'Mia Martin', email: 'mia.martin@example.com', phone: '123-456-7802', link: '/13' },
-    { username: 'Nate Thompson', email: 'nate.thompson@example.com', phone: '123-456-7803', link: '/14' },
-    { username: 'Olivia Jackson', email: 'olivia.jackson@example.com', phone: '123-456-7804', link: '/15' },
-    { username: 'Paul Lewis', email: 'paul.lewis@example.com', phone: '123-456-7805', link: '/16' },
-    { username: 'Quinn Hall', email: 'quinn.hall@example.com', phone: '123-456-7806', link: '/17' },
-    { username: 'Rachel Allen', email: 'rachel.allen@example.com', phone: '123-456-7807', link: '/18' },
-    { username: 'Sam Clark', email: 'sam.clark@example.com', phone: '123-456-7808', link: '/19' },
-    { username: 'Tina Rodriguez', email: 'tina.rodriguez@example.com', phone: '123-456-7809', link: '/20' },
+export const womenImages = [
+    "https://randomuser.me/api/portraits/women/31.jpg",
+    "https://randomuser.me/api/portraits/women/22.jpg",
+    "https://randomuser.me/api/portraits/women/94.jpg",
+    "https://randomuser.me/api/portraits/women/7.jpg",
+    "https://randomuser.me/api/portraits/women/56.jpg"
+];
+
+export const menImages = [
+    "https://randomuser.me/api/portraits/men/9.jpg",
+    "https://randomuser.me/api/portraits/men/42.jpg",
+    "https://randomuser.me/api/portraits/men/61.jpg",
+    "https://randomuser.me/api/portraits/men/52.jpg",
+    "https://randomuser.me/api/portraits/men/44.jpg"
 ];

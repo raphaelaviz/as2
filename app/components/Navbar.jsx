@@ -10,7 +10,7 @@ export async function Navbar() {
 
 
     return (
-        <nav className="w-full h-16 flex items-center px-6 md:px-8 justify-between">
+        <nav className="w-full h-16 flex items-center px-6 md:px-8 justify-between border-2 border-opacity-10 border-gray-500 mb-10">
             <div className="relative">
                 <Link href={'/'}>
                     <Image

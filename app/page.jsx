@@ -1,5 +1,3 @@
-
-
 import CardGrid from './components/CardGrid'
 import AddFriendButton from './components/AddFriendButton'
 
