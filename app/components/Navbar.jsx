@@ -16,16 +16,19 @@ export async function Navbar() {
                     <h1 className="text-2xl font-extrabold">FRIENDS</h1>
                 </Link>
             </div>
-
-            {user 
-            ? (<UserButton afterSignOutUrl='/'/>)
-            : <SignInButton mode='modal'>
+    
+            {user ? (
+                <div className="flex-center space-x-2 text-gray-700">
+                    <p>Hello, {user.firstName}</p>
+                    <UserButton afterSignOutUrl='/' />
+                </div>
+            ) : (
+                <SignInButton mode='modal'>
                     <button className='border-2 border-gray-500 rounded p-2'>
                         Sign in
                     </button>
-              </SignInButton>    
-        }
-
+                </SignInButton>
+            )}
         </nav>
     );
 }

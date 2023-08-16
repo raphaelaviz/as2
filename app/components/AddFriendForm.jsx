@@ -49,11 +49,11 @@ export default function AddFriendForm() {
       });
 
   return (
-    <form className="w-1/3 border-2 border-gray-300 rounded p-6 flex flex-col space-y-4" onSubmit={handleSubmit(createFriend)}>
+    <form className="form__container" onSubmit={handleSubmit(createFriend)}>
         <label htmlFor="name">Friend's name:</label>
         <input
             type="text"
-            className="border border-zinc-200 shadow-sm rounded p-2"
+            className="form__field"
             {...register('name')}
         />
         {errors.name && <span className="text-red-500">{errors.name.message}</span>}
@@ -61,7 +61,7 @@ export default function AddFriendForm() {
         <label htmlFor="email">Friend's email:</label>
         <input
             type="email"
-            className="border border-zinc-200 shadow-sm rounded p-2"
+            className="form__field"
             {...register('email')}
         />
         {errors.email && <span className="text-red-500">{errors.email.message}</span>}
@@ -69,7 +69,7 @@ export default function AddFriendForm() {
 
         <label htmlFor="genderForImage">Choose Image:</label>
         <select 
-            className="border border-zinc-200 shadow-sm rounded p-2"
+            className="form__field"
             {...register('image')}
         >
             <option value="">Select an option</option>
@@ -80,7 +80,7 @@ export default function AddFriendForm() {
         {errors.image && <span className="text-red-500">{errors.image.message}</span>}
 
 
-        <button className="border-2 p-2 bg-gray-800 rounded text-zinc-200 hover:text-orange-400">Submit</button>
+        <button className="form__button">Submit</button>
 
        
     </form>
