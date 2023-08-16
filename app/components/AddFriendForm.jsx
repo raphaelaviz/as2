@@ -8,12 +8,15 @@ import { womenImages, menImages } from '../lib/data'
 import toast from 'react-hot-toast';
 
 export default function AddFriendForm() {
+    
     const [emailError, setEmailError] = useState('');
 
     const createFriend = (data) => {        
         const storedFriends = localStorage.getItem('friends');
         const currentFriends = storedFriends ? JSON.parse(storedFriends) : [];
     
+
+        //checkss for unique email
         const emailExists = currentFriends.some(friend => friend.email === data.email);
         if(emailExists) {
             setEmailError('This email is already in use.');
@@ -32,6 +35,7 @@ export default function AddFriendForm() {
             name: data.name,
             email: data.email,
             image: randomImage
+            //to do: add associate friends object
         };
     
         currentFriends.push(newFriend);
