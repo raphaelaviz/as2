@@ -1,20 +1,12 @@
-'use client'
-
 import Image from "next/image";
 import logo from '../../public/logo.png';
 import Link from "next/link";
+import { currentUser, SignIn, SignInButton, UserButton } from "@clerk/nextjs";
 
-import { NavDropdownMenu } from "./NavDropdownMenu";
 
 
-export const NavLinks = [
-    { href: '/1', text: 'Link to 1' },
-    { href: '/2', text: 'Link to 2' },
-    { href: '/3', text: 'Link to 3' },
-    { href: '/4', text: 'Link to 4' },
-];
-
-export function Navbar() {
+export async function Navbar() {
+    const user = await currentUser()
 
 
     return (
@@ -31,13 +23,14 @@ export function Navbar() {
                 </Link>
             </div>
 
-            <div className="space-x-4 hidden md:block">
-                {NavLinks.map((link, index) => (
-                    <Link key={index} href={link.href} className="text-gray-600 rounded focus:ring-2 p-3 ring-emerald-400 hover:text-blue-400 font-bold">{link.text}</Link>
-                ))}
-            </div>
-
-            <NavDropdownMenu/>
+            {user 
+            ? (<UserButton afterSignOutUrl='/'/>)
+            : <SignInButton mode='modal'>
+                    <button className='border-2 border-gray-500 rounded p-2'>
+                        Sign in
+                    </button>
+              </SignInButton>    
+        }
 
         </nav>
     );

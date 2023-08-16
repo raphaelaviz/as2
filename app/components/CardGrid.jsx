@@ -3,7 +3,8 @@ import { users } from "../lib/data";
 
 export default function CardGrid() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8">
+    <div className="flex flex-col w-2/4 space-y-2">
+
        {users.map((user, index) => (
         <Card 
             key={index} 
@@ -13,7 +14,6 @@ export default function CardGrid() {
             link={user.link} 
         />
       ))}
-      aaa
     </div>
   );
 }
